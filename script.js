@@ -3,10 +3,14 @@
         const searchIcon = document.querySelector('.search-icon');
         // console.log(homeIcon.src);
 
+        const livingRoom = document.querySelector('#living_room');
+        const categories = document.querySelector('.categories');
 
+        
         // HOME ICON
         homeIcon.addEventListener('mouseenter', changeHomeIcon);
         homeIcon.addEventListener('mouseleave', changeBackHomeIcon);
+        homeIcon.addEventListener('click', backToHome);
 
         function changeHomeIcon(e) {
             e.preventDefault();
@@ -21,7 +25,12 @@
             // console.log(homeIcon.src);
         }
 
-
+        function backToHome() {
+            setTimeout(() => {
+                categories.style.display = 'none';
+                setTimeout(() => (categories.style.opacity = '0'), 50);
+            }, 50);
+        }
 
         // BASKET ICON
         basketIcon.addEventListener('mouseenter', changeBasketIcon);
@@ -88,7 +97,7 @@
         let timesClicked = 1;
         
         linesIcon.addEventListener('click', checktimesClicked);
-
+        livingRoom.addEventListener('click', displayCategories);
 
         function changeToCloseIcon() {
             linesIcon.style.top = '24.5px';
@@ -141,8 +150,16 @@
             e.preventDefault();
             let imgScale = linesIcon.style.transform = 'scale(1)';
         }
-        
-             
+
+
+        function displayCategories() {
+            closeMenu();
+            rightMenu.style.right = "-440px";
+            setTimeout(() => {
+                categories.style.display = 'flex';
+                setTimeout(() => (categories.style.opacity = '1'), 50);
+            }, 120);
+        }
       //--------------------------------------------------------------
       
         const pagBlue = document.querySelector('.pag-blue');
