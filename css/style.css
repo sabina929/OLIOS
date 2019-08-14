@@ -503,3 +503,22 @@ body {
     width: 16%;
     height: auto;
 }
+
+.show-more {
+    position: absolute;
+    bottom: 14px;
+}
+
+.show-more a {
+    color: blue;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-size: 1rem;
+    transition: all .3s ease;
+}
+
+.show-more a:hover {
+    letter-spacing: .75px;
+    font-size: 1.05rem;
+}
