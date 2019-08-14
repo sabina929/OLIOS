@@ -158,7 +158,7 @@
             setTimeout(() => {
                 categories.style.display = 'flex';
                 setTimeout(() => (categories.style.opacity = '1'), 50);
-            }, 120);
+            }, 140);
         }
       //--------------------------------------------------------------
       
