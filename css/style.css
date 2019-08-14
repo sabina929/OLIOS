@@ -333,9 +333,8 @@ body {
 
 .categories .products {
     position: absolute;
-    margin: 430px auto 0px auto;
+    margin: 418px auto 0px auto;
     width: 1040px;
-    /* background-color: blueviolet; */
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
