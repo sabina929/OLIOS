@@ -219,10 +219,14 @@
 
 
         const redSeatCont = document.querySelector('.red-seat-container');
+        const blueSeatCont = document.querySelector('.blue-seat-container');
+        const darkSeatCont = document.querySelector('.dark-seat-container');
+        
         const productSec = document.querySelector('.product');
-        //console.log(redSeatCont);
-
+    
         redSeatCont.addEventListener('click', goToProduct);
+        blueSeatCont.addEventListener('click', goToProduct);
+        darkSeatCont.addEventListener('click', goToProduct);
 
         function goToProduct() {
              setTimeout(() => {
@@ -237,16 +241,16 @@
                 categories.style.display = "none";
                 }, 50);
                      
-            }, 140);
+             }, 140);
         }
 
         homeIcon.addEventListener('click', backToHome);
 
         function backToHome() {
-                setTimeout(() => {
-                   productSec.style.opacity = "0";
-                   setTimeout(() => (productSec.style.display = 'none'), 50);
-                   categories.style.opacity = '0';
-                   setTimeout(() => (categories.style.display = 'none'), 50);
-                }, 140);
+             setTimeout(() => {
+                 productSec.style.opacity = "0";
+                 setTimeout(() => (productSec.style.display = 'none'), 50);
+                 categories.style.opacity = '0';
+                 setTimeout(() => (categories.style.display = 'none'), 50);
+             }, 140);
         }
