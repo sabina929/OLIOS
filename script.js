@@ -154,11 +154,19 @@
 
         function displayCategories() {
             closeMenu();
+             
             setTimeout(() => {
+                    
+                productSec.style.opacity = "0";
+                setTimeout(() => (productSec.style.display = 'none'), 50);
+                                    
                 categories.style.display = 'flex';
                 setTimeout(() => (categories.style.opacity = '1'), 50);
+                    
             }, 140);
+             
         }
+
       //--------------------------------------------------------------
       
         const pagBlue = document.querySelector('.pag-blue');
@@ -212,4 +220,29 @@
             pagBlue.src = './images/main_site/pagination_icons/2.png';
             pagStroke1.src = './images/main_site/pagination_icons/2.png';
             pagStroke2.src = './images/main_site/pagination_icons/2.png';
+        }
+
+//-------------------------------------------------------
+
+
+        const redSeatCont = document.querySelector('.red-seat-container');
+        const productSec = document.querySelector('.product');
+        //console.log(redSeatCont);
+
+        redSeatCont.addEventListener('click', goToProduct);
+
+        function goToProduct() {
+             setTimeout(() => {
+                     
+                productSec.style.display = "block";
+                setTimeout(() => {
+                    productSec.style.opacity = "1"
+                }, 50);
+                     
+                categories.style.opacity = "0";
+                setTimeout(() => {
+                categories.style.display = "none";
+                }, 50);
+                     
+            }, 140);
         }
