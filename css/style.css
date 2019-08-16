@@ -289,7 +289,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: 0;
+    display: none;
     opacity: 0;
 }
 
@@ -342,10 +342,19 @@ body {
     transition: all .5s ease;
 }
 
+.products>* {
+    transition: all .3s ease;
+}
 
+.products>*:hover {
+    cursor: pointer;
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 50px 50px 10px rgba(0, 0, 0, .1);
+}
 
 /* RED SEAT */
 .red-seat-container {
+    position: relative;
     width: 250px;
     height: 300px;
     grid-column: 1/2;
@@ -354,16 +363,9 @@ body {
     align-items: center;
 }
 
-.products>* {
-    transition: all .3s ease;
-}
-
-.products>*:hover {
-    cursor: pointer;
-    box-shadow: 0 50px 50px 10px rgba(0, 0, 0, .1);
-}
 
 .red-seat-container img {
+    position: absolute;
     width: 250px;
     height: 300px;
 }
@@ -371,20 +373,21 @@ body {
 .red-seat-container>img.red-seat {
     position: absolute;
     top: 15px;
-    width: 15%;
+    width: 60%;
     height: auto;
 }
 
 .red-seat-container>img.red-seat-texts {
     position: absolute;
-    top: 205px;
+    bottom: 15px;
     left: 15px;
-    width: 16%;
+    width: 65%;
     height: auto;
 }
 
 /* WHITE TABLE */
 .white-table-container {
+    position: relative;
     width: 760px;
     height: 300px;
     grid-column: 2/4;
@@ -394,28 +397,30 @@ body {
 }
 
 .white-table-container img {
+    position: absolute;
     width: 760px;
     height: 300px;
 }
 
 .white-table-container>img.white-table {
     position: absolute;
-    top: 55px;
-    left: 350px;
-    width: 32%;
+    top: 40px;
+    left: 70px;
+    width: 45%;
     height: auto;
 }
 
 .white-table-container>img.white-table-texts {
     position: absolute;
     top: 85px;
-    right: 60px;
-    width: 23%;
+    right: 70px;
+    width: 30%;
     height: auto;
 }
 
 /* BLUE SEAT */
 .blue-seat-container {
+    position: relative;
     width: 250px;
     height: 300px;
     display: flex;
@@ -424,14 +429,15 @@ body {
 }
 
 .blue-seat-container img {
+    position: absolute;
     width: 250px;
     height: 300px;
 }
 
 .blue-seat-container>img.blue-seat {
     position: absolute;
-    bottom: 115px;
-    width: 15%;
+    top: 40px;
+    width: 60%;
     height: auto;
 }
 
@@ -439,12 +445,13 @@ body {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    width: 16%;
+    width: 64%;
     height: auto;
 }
 
 /* MODERN BED */
 .modern-bed-container {
+    position: relative;
     width: 480px;
     height: 300px;
     display: flex;
@@ -453,29 +460,31 @@ body {
 }
 
 .modern-bed-container img {
+    position: absolute;
     width: 480px;
     height: 300px;
 }
 
 .modern-bed-container>img.modern-bed {
     position: absolute;
-    bottom: 20px;
-    left: 290px;
-    width: 24%;
+    top: 0px;
+    left: 15px;
+    width: 50%;
     height: auto;
 }
 
 .modern-bed-container>img.modern-bed-texts {
     position: absolute;
-    bottom: 120px;
-    right: 300px;
-    width: 16%;
+    bottom: 110px;
+    right: 20px;
+    width: 35%;
     height: auto;
 }
 
 
 /* DARK SEAT */
 .dark-seat-container {
+    position: relative;
     width: 250px;
     height: 300px;
     display: flex;
@@ -484,22 +493,23 @@ body {
 }
 
 .dark-seat-container img {
+    position: absolute;
     width: 250px;
     height: 300px;
 }
 
 .dark-seat-container>img.dark-seat {
     position: absolute;
-    bottom: 95px;
-    width: 18%;
+    top: 30px;
+    width: 68%;
     height: auto;
 }
 
 .dark-seat-container>img.dark-seat-texts {
-    position: absolute;
+      position: absolute;
     bottom: 15px;
-    right: 65px;
-    width: 16%;
+    left: 15px;
+    width: 64%;
     height: auto;
 }
 
@@ -514,6 +524,7 @@ body {
     text-transform: uppercase;
     font-family: "Open Sans";
     font-size: 1rem;
+    font-weight: bold;
     transition: all .3s ease;
 }
 
