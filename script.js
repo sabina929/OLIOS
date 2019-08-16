@@ -154,7 +154,6 @@
 
         function displayCategories() {
             closeMenu();
-            rightMenu.style.right = "-440px";
             setTimeout(() => {
                 categories.style.display = 'flex';
                 setTimeout(() => (categories.style.opacity = '1'), 50);
