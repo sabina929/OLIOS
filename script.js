@@ -10,8 +10,7 @@
         // HOME ICON
         homeIcon.addEventListener('mouseenter', changeHomeIcon);
         homeIcon.addEventListener('mouseleave', changeBackHomeIcon);
-        homeIcon.addEventListener('click', backToHome);
-
+       
         function changeHomeIcon(e) {
             e.preventDefault();
             let imgSrc = homeIcon.src = './images/main_site/menu/home-icon-blue.png';
@@ -25,13 +24,7 @@
             // console.log(homeIcon.src);
         }
 
-        function backToHome() {
-            setTimeout(() => {
-                categories.style.display = 'none';
-                setTimeout(() => (categories.style.opacity = '0'), 50);
-            }, 50);
-        }
-
+       
         // BASKET ICON
         basketIcon.addEventListener('mouseenter', changeBasketIcon);
         basketIcon.addEventListener('mouseleave', changeBackBasketIcon);
@@ -245,4 +238,15 @@
                 }, 50);
                      
             }, 140);
+        }
+
+        homeIcon.addEventListener('click', backToHome);
+
+        function backToHome() {
+                setTimeout(() => {
+                   productSec.style.opacity = "0";
+                   setTimeout(() => (productSec.style.display = 'none'), 50);
+                   categories.style.opacity = '0';
+                   setTimeout(() => (categories.style.display = 'none'), 50);
+                }, 140);
         }
