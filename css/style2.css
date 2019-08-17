@@ -30,7 +30,7 @@ body {
 .header .texts {
     position: absolute;
     right: -12px;
-    bottom: -90px;
+    bottom: -20%;
     width: 100vw;
     height: auto;
 }
@@ -80,7 +80,7 @@ body {
 .header .pagination {
     position: absolute;
     right: 5%;
-    bottom: 5%;
+    bottom: 6%;
 }
 
 .header .pagination ul {
