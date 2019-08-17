@@ -598,6 +598,7 @@ body {
     left: 28%;
     width: 5%;
     height: auto;
+    cursor: pointer;
 }
 
 .product .product-wrapper .left-part img:nth-child(4) {
@@ -606,6 +607,7 @@ body {
     left: 34%;
     width: 5%;
     height: auto;
+    cursor: pointer;
 }
 
 .product .product-wrapper .left-part img:nth-child(5) {
@@ -614,6 +616,7 @@ body {
     right: 7%;
     width: 5%;
     height: auto;
+    cursor: pointer;
 }
 
 .product .product-wrapper .left-part img:nth-child(6) {
@@ -622,6 +625,7 @@ body {
     right: 15%;
     width: 3.5%;
     height: auto;
+    cursor: pointer;
 }
 
 .product .product-wrapper .left-part img:nth-child(7) {
@@ -630,6 +634,7 @@ body {
     right: 7%;
     width: 4%;
     height: auto;
+    cursor: pointer;
 }
 
 .product .product-wrapper .left-part img:nth-child(8) {
@@ -789,6 +794,12 @@ body {
     left: 15%;
     width: 19%;
     height: auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.product .product-wrapper .right-part .lower img:nth-child(3):hover {
+    transform: translateY(-5px) scale(1.05);
 }
 
 .product .product-wrapper .right-part .lower img:nth-child(4) {
@@ -797,6 +808,12 @@ body {
     left: 45%;
     width: 19%;
     height: auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.product .product-wrapper .right-part .lower img:nth-child(4):hover {
+    transform: translateY(-5px) scale(1.05);
 }
 
 .product .product-wrapper .right-part .lower img:nth-child(5) {
@@ -805,4 +822,10 @@ body {
     left: 75%;
     width: 18.2%;
     height: auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.product .product-wrapper .right-part .lower img:nth-child(5):hover {
+    transform: translateY(-5px) scale(1.05);
 }
