@@ -29,16 +29,16 @@ body {
 
 .header .texts {
     position: absolute;
-    right: -18px;
-    bottom: -20%;
+    right: -12px;
+    bottom: -90px;
     width: 100vw;
     height: auto;
 }
 
 .header .button {
     position: absolute;
-    right: 44.5%;
-    top: 38%;
+    right: 50%;
+    top: 40%;
     transform: translate(50%, -50%);
     background-color: blue;
     width: 200px;
@@ -49,7 +49,7 @@ body {
     cursor: pointer;
     border-radius: 50px;
     transition: all 0.35s ease;
-    transform: translate(0px, 0px);
+    transform: translate(115px, 0px);
 }
 
 .header .button:hover {
@@ -57,7 +57,7 @@ body {
 }
 
 .header .button:active {
-    transform: translate(0px, 10px);
+    transform: translate(115px, 10px);
 }
 
 .header .button a {
@@ -76,10 +76,11 @@ body {
     letter-spacing: 1.5px;
 }
 
+
 .header .pagination {
     position: absolute;
-    right: 6%;
-    bottom: 7%;
+    right: 5%;
+    bottom: 5%;
 }
 
 .header .pagination ul {
@@ -88,7 +89,6 @@ body {
 
 .header .pagination ul li {
     list-style: none;
-
 }
 
 .header .pagination ul li img {
@@ -117,8 +117,15 @@ body {
 }
 
 .menu {
-    z-index: 1;
+    z-index: 20;
+    top: 0;
+    left: 0;
     position: absolute;
+}
+
+.menu .menu-bg img {
+    width: 100%;
+    height: 100vh;
 }
 
 .menu .wrapper {
@@ -131,9 +138,10 @@ body {
 
 .menu .wrapper .nav {
     position: absolute;
-    top: 200px;
+    top: 150px;
     left: 50px;
 }
+
 
 .menu .wrapper .nav nav ul li {
     list-style: none;
@@ -141,19 +149,19 @@ body {
 
 .menu .wrapper .nav>nav>ul>li:nth-child(2)>a>img {
     position: absolute;
-    top: 110px;
+    top: 80px;
     left: -4px;
 }
 
 .menu .wrapper .nav>nav>ul>li:nth-child(3)>a>img {
     position: absolute;
-    top: 220px;
+    top: 160px;
     left: -5px;
 }
 
 .menu .wrapper .in-icon {
     position: absolute;
-    top: 920px;
+    top: 690px;
     left: 55px;
     cursor: pointer;
 }
@@ -203,7 +211,7 @@ body {
 
 .right-menu .right-menu-wrapper .right-menu-nav {
     position: absolute;
-    top: 200px;
+    top: 150px;
     right: 60px;
 }
 
@@ -214,7 +222,7 @@ body {
     justify-content: space-between;
     justify-items: center;
     align-items: center;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
 }
 
 .right-menu .right-menu-wrapper .right-menu-nav nav ul li a {
@@ -236,16 +244,16 @@ body {
 }
 
 .right-menu .right-menu-wrapper .right-menu-nav nav ul li a p:hover {
-    font-size: 1.18rem;
-    letter-spacing: 1.6px;
-    padding-left: -24px;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    padding-left: -20px;
     color: blue;
 }
 
 .right-menu .right-menu-wrapper .show-all {
     position: absolute;
-    top: 950px;
-    right: 65px;
+    top: 705px;
+    right: 75px;
     width: 220px;
     height: 50px;
     cursor: pointer;
@@ -281,15 +289,15 @@ body {
 
 
 /* ----- CATEGORIES ----- */
+
 .categories {
-    z-index: 0;
+    z-index: 1;
     transition: all .6s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
     opacity: 0;
-
 }
 
 .categories .cat-bg>img {
@@ -298,23 +306,25 @@ body {
     top: 0;
     width: 100vw;
     height: auto;
+
 }
 
 .cat-texts {
     position: absolute;
-    left: 19%;
-    top: 4%;
+    left: 15.4%;
+    top: 3%;
     display: flex;
     justify-items: center;
     justify-content: center;
+
 }
 
 .cat-texts .heading {
-    margin-right: 606px;
+    margin-right: 416px;
 }
 
 .cat-texts .heading img {
-    width: 75%;
+    width: 61%;
 }
 
 .cat-texts .cat-name {
@@ -325,14 +335,13 @@ body {
 }
 
 .cat-texts .cat-name img {
-    width: 85%;
+    width: 65%;
 }
-
 
 .categories .products {
     position: absolute;
-    margin: 518px auto 0px auto;
-    width: 1240px;
+    margin: 418px auto 0px auto;
+    width: 1040px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -350,12 +359,11 @@ body {
     box-shadow: 0 50px 50px 10px rgba(0, 0, 0, .1);
 }
 
-
 /* RED SEAT */
 .red-seat-container {
     position: relative;
-    width: 260px;
-    height: 320px;
+    width: 250px;
+    height: 300px;
     grid-column: 1/2;
     display: flex;
     justify-content: center;
@@ -365,8 +373,8 @@ body {
 
 .red-seat-container img {
     position: absolute;
-    width: 260px;
-    height: 320px;
+    width: 250px;
+    height: 300px;
 }
 
 .red-seat-container>img.red-seat {
@@ -380,15 +388,15 @@ body {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    width: 75%;
+    width: 65%;
     height: auto;
 }
 
 /* WHITE TABLE */
 .white-table-container {
     position: relative;
-    width: 950px;
-    height: 320px;
+    width: 760px;
+    height: 300px;
     grid-column: 2/4;
     display: flex;
     justify-content: center;
@@ -397,8 +405,8 @@ body {
 
 .white-table-container img {
     position: absolute;
-    width: 950px;
-    height: 320px;
+    width: 760px;
+    height: 300px;
 }
 
 .white-table-container>img.white-table {
@@ -417,12 +425,11 @@ body {
     height: auto;
 }
 
-
 /* BLUE SEAT */
 .blue-seat-container {
     position: relative;
-    width: 260px;
-    height: 320px;
+    width: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -430,8 +437,8 @@ body {
 
 .blue-seat-container img {
     position: absolute;
-    width: 260px;
-    height: 320px;
+    width: 250px;
+    height: 300px;
 }
 
 .blue-seat-container>img.blue-seat {
@@ -445,16 +452,15 @@ body {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    width: 74%;
+    width: 64%;
     height: auto;
 }
-
 
 /* MODERN BED */
 .modern-bed-container {
     position: relative;
-    width: 660px;
-    height: 320px;
+    width: 480px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -462,31 +468,32 @@ body {
 
 .modern-bed-container img {
     position: absolute;
-    width: 660px;
-    height: 320px;
+    width: 480px;
+    height: 300px;
 }
 
 .modern-bed-container>img.modern-bed {
     position: absolute;
     top: 0px;
-    left: 30px;
-    width: 48%;
+    left: 15px;
+    width: 50%;
     height: auto;
 }
 
 .modern-bed-container>img.modern-bed-texts {
     position: absolute;
     bottom: 110px;
-    right: 35px;
+    right: 20px;
     width: 35%;
     height: auto;
 }
 
+
 /* DARK SEAT */
 .dark-seat-container {
     position: relative;
-    width: 260px;
-    height: 320px;
+    width: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -494,8 +501,8 @@ body {
 
 .dark-seat-container img {
     position: absolute;
-    width: 260px;
-    height: 320px;
+    width: 250px;
+    height: 300px;
 }
 
 .dark-seat-container>img.dark-seat {
@@ -509,13 +516,13 @@ body {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    width: 74%;
+    width: 64%;
     height: auto;
 }
 
 .show-more {
     position: absolute;
-    bottom: 10%;
+    bottom: 14px;
 }
 
 .show-more a {
@@ -523,13 +530,34 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Open Sans";
-    font-size: 1.2rem;
-    transition: all .3s ease;
+    font-size: 1rem;
     font-weight: bold;
+    transition: all .3s ease;
 }
 
 .show-more a:hover {
     letter-spacing: .75px;
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+/* PRODUCT */
+.product {
+    z-index: 2;
+    transition: all .6s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+
+}
+
+
+.product .product-bg>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+
 }
