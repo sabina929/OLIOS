@@ -254,3 +254,39 @@
                  setTimeout(() => (categories.style.display = 'none'), 50);
              }, 140);
         }
+
+
+       //-------------------------------------------------------------------
+
+        const incrIcon = document.querySelector('#increment');
+        const decrIcon = document.querySelector('#decrement');
+        const quant = document.querySelector('#quantity');
+               
+        incrIcon.addEventListener('click', increaseAmount);
+        decrIcon.addEventListener('click', decreaseAmount);
+
+        function increaseAmount(event) {
+            event.preventDefault();
+            // event.stopPropagation();
+            let amount = Number(quant.innerText);
+            amount++;
+            console.log(amount);
+            quant.innerText = `${amount}`;
+            // console.log(quant.innerText);
+            // console.log(quant);
+        }
+
+
+        function decreaseAmount(event) {
+            event.preventDefault();
+            // event.stopPropagation();
+            let amount = Number(quant.innerText);
+            if (amount > 1) {
+                amount--;
+            } else if (amount === 1) {
+                return;
+            }
+            // console.log(amount);
+            quant.innerText = `${amount}`;
+            // console.log('clicked');
+        }
