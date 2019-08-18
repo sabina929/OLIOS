@@ -688,44 +688,66 @@ body {
     height: auto;
 }
 
-.product .product-wrapper .right-part .upper img:nth-child(5) {
-    position: absolute;
-    top: 76%;
-    left: 43.5%;
-    width: 2%;
-    height: auto;
-    z-index: 5;
-    cursor: pointer;
-}
-
-.product .product-wrapper .right-part .upper img:nth-child(6) {
-    position: absolute;
-    top: 78%;
-    left: 43.5%;
-    width: 2.2%;
-    height: auto;
-    z-index: 5;
-    cursor: pointer;
-}
-
-.product .product-wrapper .right-part .upper p {
+.product .product-wrapper .right-part .upper .quant {
     position: absolute;
     top: 75.6%;
     left: 40%;
-    width: 54px;
+    width: 60px;
     height: 30px;
     background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 14px;
+    border-radius: 50px;
+
+}
+
+.product .product-wrapper .right-part .upper .quant .quant_text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.product .product-wrapper .right-part .upper .quant .quant_text p {
     font-size: 1.22rem;
     font-family: 'Open Sans';
+    text-align: right;
     font-weight: 700;
-    display: flex;
-    justify-content: start;
+    margin: 0px auto;
+  }
+
+
+.product .product-wrapper .right-part .upper .quant .icons {
+    width: 20px;
+    height: 16px;
+    justify-content: center;
     align-items: center;
-    display: inline-flex;
-    padding: 5px 14px;
-    z-index: 4;
-    border-radius: 50px;
 }
+
+#increment {
+    position: absolute;
+    top: -7%;
+    left: 50%;
+    width: 35%;
+    height: auto;
+}
+
+#decrement {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    width: 39%;
+    height: auto;
+}
+
+
+
 
 .product .product-wrapper .right-part .upper .right-part_upper_button {
     position: absolute;
@@ -764,7 +786,7 @@ body {
 }
 
 .product .product-wrapper .right-part .upper .right-part_upper_button:hover a {
-    letter-spacing: 1px;
+    letter-spacing: .8px;
 }
 
 .product .product-wrapper .right-part .lower {
