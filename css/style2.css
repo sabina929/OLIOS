@@ -700,7 +700,7 @@ body {
     grid-column-gap: 2px;
     justify-content: center;
     align-items: center;
-    padding: 2px 14px;
+    padding: 0px 14px;
     border-radius: 50px;
 
 }
@@ -732,22 +732,21 @@ body {
 
 #increment {
     position: absolute;
-    top: -7%;
+    top: 8%;
     left: 50%;
-    width: 35%;
+    width: 26%;
     height: auto;
+    cursor: pointer;
 }
 
 #decrement {
     position: absolute;
-    top: 41%;
+    top: 46%;
     left: 50%;
-    width: 39%;
+    width: 30%;
     height: auto;
+    cursor: pointer;
 }
-
-
-
 
 .product .product-wrapper .right-part .upper .right-part_upper_button {
     position: absolute;
