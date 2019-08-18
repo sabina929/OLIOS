@@ -167,11 +167,7 @@
         const pagStroke2 = document.querySelector('.pag-stroke2');
         const pagStroke3 = document.querySelector('.pag-stroke3');
 
-        // console.log(pagBlue);
-        // console.log(pagStroke1);
-        // console.log(pagStroke2);
-        // console.log(pagStroke3);
-
+      
         pagBlue.addEventListener('click', changeToBlue);
         pagStroke1.addEventListener('click', changeToBlue1);
         pagStroke2.addEventListener('click', changeToBlue2);
@@ -270,7 +266,7 @@
             // event.stopPropagation();
             let amount = Number(quant.innerText);
             amount++;
-            console.log(amount);
+            // console.log(amount);
             quant.innerText = `${amount}`;
             // console.log(quant.innerText);
             // console.log(quant);
