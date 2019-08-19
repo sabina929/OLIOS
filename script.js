@@ -286,3 +286,97 @@
             quant.innerText = `${amount}`;
             // console.log('clicked');
         }
+
+
+//----------------------------------------------------------------
+
+        const addIcon = document.querySelector('#add-icon');
+        const removeIcon = document.querySelector('#remove-icon');
+        const searchIcon2 = document.querySelector('#search-icon');
+        const pinIcon = document.querySelector('#pin-icon');
+        const heartIcon = document.querySelector('#heart-icon');
+
+        addIcon.addEventListener('mouseover', changeAddIconToReversed);
+        addIcon.addEventListener('mouseout', changeBackToAddIcon);
+        removeIcon.addEventListener('mouseover', changeRemoveIconToReversed);
+        removeIcon.addEventListener('mouseout', changeBackToRemoveIcon);
+        searchIcon2.addEventListener('mouseover', changeSearchIconToDark);
+        searchIcon2.addEventListener('mouseout', changeBackToSearchIcon);
+        pinIcon.addEventListener('mouseover', changePinIconToDark);
+        pinIcon.addEventListener('mouseout', changeBackToPinIcon);
+
+
+        let timesClickedToHeartIcon = 1;
+        heartIcon.addEventListener('click', checktimesClickedToHeartIcon);
+        heartIcon.addEventListener('mouseover', changeHeartIconToFilledOnMouseover);
+        heartIcon.addEventListener('mouseout', changeBackTochangeHeartIconOnMouseout);
+
+        // ADD ICON
+        function changeAddIconToReversed() {
+            addIcon.src = "./images/product/left_photo/add-reversed.png";
+            // console.log('changed');
+        }
+
+        function changeBackToAddIcon() {
+            addIcon.src = "./images/product/left_photo/add.png";
+            // console.log('changed');
+        }
+
+        // REMOVE ICON
+        function changeRemoveIconToReversed() {
+            removeIcon.src = "./images/product/left_photo/remove-reversed.png";
+        }
+
+        function changeBackToRemoveIcon() {
+            removeIcon.src = "./images/product/left_photo/remove.png";
+        }
+        // SEARCH ICON
+        function changeSearchIconToDark() {
+            searchIcon2.src = "./images/product/left_photo/search-dark.png";
+        }
+
+        function changeBackToSearchIcon() {
+            searchIcon2.src = "./images/product/left_photo/search.png";
+        }
+        // PIN ICON
+        function changePinIconToDark() {
+            pinIcon.src = "./images/product/left_photo/pin-dark.png";
+        }
+
+        function changeBackToPinIcon() {
+            pinIcon.src = "./images/product/left_photo/pin.png";
+        }
+        // HEART ICON
+        function changeHeartIconToFilledOnMouseover() {
+            heartIcon.src = "./images/product/left_photo/filled-heart.png";
+        }
+
+
+        function changeBackTochangeHeartIconOnMouseout() {
+            heartIcon.src = "./images/product/left_photo/heart.png";
+
+        }
+
+        function changeHeartIconToFilled() {
+            heartIcon.src = "./images/product/left_photo/filled-heart.png";
+            timesClickedToHeartIcon = 2;
+            heartIcon.removeEventListener('mouseout', changeBackTochangeHeartIconOnMouseout);
+
+        }
+
+        function changeBackTochangeHeartIcon() {
+            heartIcon.src = "./images/product/left_photo/heart.png";
+            timesClickedToHeartIcon = 1;
+            heartIcon.addEventListener('mouseout', changeBackTochangeHeartIconOnMouseout);
+
+        }
+
+        function checktimesClickedToHeartIcon() {
+            if (timesClickedToHeartIcon == 2) {
+                // console.log("not filled");
+                changeBackTochangeHeartIcon();
+            } else if (timesClickedToHeartIcon == 1) {
+                // console.log("filled");
+                changeHeartIconToFilled();
+            }
+        }
