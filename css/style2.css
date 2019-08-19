@@ -159,6 +159,30 @@ body {
     left: -5px;
 }
 
+.home-icon {
+    transition: all .45s ease;
+}
+
+.home-icon:hover {
+    transform: scale(1.078);
+}
+
+.basket-icon {
+    transition: all .45s ease;
+}
+
+.basket-icon:hover {
+    transform: scale(1.078);
+}
+
+.search-icon {
+    transition: all .45s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.078);
+}
+
 .menu .wrapper .in-icon {
     position: absolute;
     top: 690px;
@@ -602,8 +626,6 @@ body {
     transition: all .2s ease;
 }
 
-
-
 #add-icon:active {
     transform: scale(1.16);
 }
@@ -617,8 +639,6 @@ body {
     cursor: pointer;
     transition: all .2s ease;
 }
-
-
 
 #remove-icon:active {
     transform: scale(1.16);
@@ -635,8 +655,6 @@ body {
     transition: all .25s ease;
 }
 
-
-
 #search-icon:hover {
     transform: scale(1.14);
 }
@@ -650,8 +668,6 @@ body {
     cursor: pointer;
     transition: all .25s ease;
 }
-
-
 
 #pin-icon:hover {
     transform: scale(1.14);
