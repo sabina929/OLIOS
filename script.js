@@ -6,11 +6,13 @@
         const livingRoom = document.querySelector('#living_room');
         const categories = document.querySelector('.categories');
 
-        
+
         // HOME ICON
-        homeIcon.addEventListener('mouseenter', changeHomeIcon);
-        homeIcon.addEventListener('mouseleave', changeBackHomeIcon);
-       
+        homeIcon.addEventListener('mouseover', changeHomeIcon);
+        homeIcon.addEventListener('mouseout', changeBackHomeIcon);
+
+        homeIcon.addEventListener('click', backToHome);
+
         function changeHomeIcon(e) {
             e.preventDefault();
             let imgSrc = homeIcon.src = './images/main_site/menu/home-icon-blue.png';
@@ -24,10 +26,11 @@
             // console.log(homeIcon.src);
         }
 
-       
+
+
         // BASKET ICON
-        basketIcon.addEventListener('mouseenter', changeBasketIcon);
-        basketIcon.addEventListener('mouseleave', changeBackBasketIcon);
+        basketIcon.addEventListener('mouseover', changeBasketIcon);
+        basketIcon.addEventListener('mouseout', changeBackBasketIcon);
 
         function changeBasketIcon(e) {
             e.preventDefault();
@@ -43,23 +46,32 @@
 
 
         // SEARCH ICON
-        searchIcon.addEventListener('mouseenter', changeSearchIcon);
-        searchIcon.addEventListener('mouseleave', changeBackSearchIcon);
+        searchIcon.addEventListener('click', changeSearchIconOnClick);
+        searchIcon.addEventListener('mouseover', changeSearchIcon);
+        searchIcon.addEventListener('mouseout', changeBackSearchIcon);
+
+        function changeSearchIconOnClick(e) {
+            e.preventDefault();
+            let imgSrc = searchIcon.src = './images/main_site/menu/search-icon-blue.png';
+            searchIcon.removeEventListener('mouseout', changeBackSearchIcon);
+            homeIcon.addEventListener('mouseout', changeBackHomeIcon);
+            homeIcon.src = './images/main_site/menu/home-icon.png';
+        }
 
         function changeSearchIcon(e) {
             e.preventDefault();
             let imgSrc = searchIcon.src = './images/main_site/menu/search-icon-blue.png';
-           
+
         }
 
         function changeBackSearchIcon(e) {
             e.preventDefault();
             let imgSrc = searchIcon.src = './images/main_site/menu/search-icon.png';
-            
+
         }
-        
+
         //--------------------------------------------------------------
-         const downloadIcon = document.querySelector('.down-icon');
+        const downloadIcon = document.querySelector('.down-icon');
         // console.log(downloadIcon);
 
         downloadIcon.addEventListener('mouseover', moveDown);
@@ -76,19 +88,19 @@
             let imgDown = downloadIcon.style.transform = "translateY(0px)";
             let imgSrc = downloadIcon.src = " ./images/main_site/menu/in-icon.png";
         }
-        
-      //--------------------------------------------------------------
-      
+
+        //--------------------------------------------------------------
+
         const linesIcon = document.querySelector('.lines');
         const rightMenu = document.querySelector('.right-menu');
         // console.log(linesIcon);
-        
-        
+
+
         linesIcon.addEventListener('mouseover', zoomIn);
         linesIcon.addEventListener('mouseout', zoomOut);
-        
+
         let timesClicked = 1;
-        
+
         linesIcon.addEventListener('click', checktimesClicked);
         livingRoom.addEventListener('click', displayCategories);
 
@@ -122,7 +134,6 @@
             e.preventDefault();
             if (timesClicked == 2) {
                 // console.log("close");
-
                 closeMenu();
             } else if (timesClicked == 1) {
                 // console.log("lines");
@@ -147,27 +158,30 @@
 
         function displayCategories() {
             closeMenu();
-             
+
             setTimeout(() => {
-                    
+
                 productSec.style.opacity = "0";
                 setTimeout(() => (productSec.style.display = 'none'), 50);
-                                    
+
                 categories.style.display = 'flex';
                 setTimeout(() => (categories.style.opacity = '1'), 50);
-                    
-            }, 140);
-             
-        }
 
-      //--------------------------------------------------------------
-      
+            }, 140);
+
+        }
+        //--------------------------------------------------------------
+
         const pagBlue = document.querySelector('.pag-blue');
         const pagStroke1 = document.querySelector('.pag-stroke1');
         const pagStroke2 = document.querySelector('.pag-stroke2');
         const pagStroke3 = document.querySelector('.pag-stroke3');
 
-      
+        // console.log(pagBlue);
+        // console.log(pagStroke1);
+        // console.log(pagStroke2);
+        // console.log(pagStroke3);
+
         pagBlue.addEventListener('click', changeToBlue);
         pagStroke1.addEventListener('click', changeToBlue1);
         pagStroke2.addEventListener('click', changeToBlue2);
@@ -211,44 +225,48 @@
             pagStroke2.src = './images/main_site/pagination_icons/2.png';
         }
 
-//-------------------------------------------------------
+
 
 
         const redSeatCont = document.querySelector('.red-seat-container');
         const blueSeatCont = document.querySelector('.blue-seat-container');
         const darkSeatCont = document.querySelector('.dark-seat-container');
-        
+
         const productSec = document.querySelector('.product');
-    
+
+        // console.log(redSeatCont);
+
         redSeatCont.addEventListener('click', goToProduct);
         blueSeatCont.addEventListener('click', goToProduct);
         darkSeatCont.addEventListener('click', goToProduct);
 
         function goToProduct() {
-             setTimeout(() => {
-                     
+            setTimeout(() => {
+
                 productSec.style.display = "block";
                 setTimeout(() => {
                     productSec.style.opacity = "1"
                 }, 50);
-                     
+
                 categories.style.opacity = "0";
                 setTimeout(() => {
-                categories.style.display = "none";
+                    categories.style.display = "none";
                 }, 50);
-                     
-             }, 140);
+
+            }, 140);
         }
 
-        homeIcon.addEventListener('click', backToHome);
 
         function backToHome() {
-             setTimeout(() => {
-                 productSec.style.opacity = "0";
-                 setTimeout(() => (productSec.style.display = 'none'), 50);
-                 categories.style.opacity = '0';
-                 setTimeout(() => (categories.style.display = 'none'), 50);
-             }, 140);
+            homeIcon.removeEventListener('mouseout', changeBackHomeIcon);
+            searchIcon.addEventListener('mouseout', changeBackSearchIcon);
+            let imgSrc = searchIcon.src = './images/main_site/menu/search-icon.png';
+            setTimeout(() => {
+                productSec.style.opacity = "0";
+                setTimeout(() => (productSec.style.display = 'none'), 50);
+                categories.style.opacity = '0';
+                setTimeout(() => (categories.style.display = 'none'), 50);
+            }, 140);
         }
 
 
