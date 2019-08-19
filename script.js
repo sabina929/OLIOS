@@ -67,13 +67,12 @@
         function changeBackSearchIcon(e) {
             e.preventDefault();
             let imgSrc = searchIcon.src = './images/main_site/menu/search-icon.png';
-
         }
+
 
         //--------------------------------------------------------------
         const downloadIcon = document.querySelector('.down-icon');
-        // console.log(downloadIcon);
-
+        
         downloadIcon.addEventListener('mouseover', moveDown);
         downloadIcon.addEventListener('mouseout', moveUp);
 
@@ -89,13 +88,12 @@
             let imgSrc = downloadIcon.src = " ./images/main_site/menu/in-icon.png";
         }
 
+
         //--------------------------------------------------------------
 
         const linesIcon = document.querySelector('.lines');
         const rightMenu = document.querySelector('.right-menu');
-        // console.log(linesIcon);
-
-
+       
         linesIcon.addEventListener('mouseover', zoomIn);
         linesIcon.addEventListener('mouseout', zoomOut);
 
@@ -116,7 +114,6 @@
         }
 
 
-
         function closeMenu() {
             linesIcon.style.top = '-12px';
             linesIcon.style.right = '-12.5px';
@@ -126,8 +123,6 @@
             // console.log(linesIcon.src);
             timesClicked = 1;
             // console.log(timesClicked);
-
-
         }
 
         function checktimesClicked(e) {
@@ -147,7 +142,6 @@
         function zoomIn(e) {
             e.preventDefault();
             let imgScale = linesIcon.style.transform = 'scale(1.09)';
-
         }
 
         function zoomOut(e) {
@@ -157,6 +151,11 @@
 
 
         function displayCategories() {
+            homeIcon.addEventListener('mouseout', changeBackHomeIcon);
+            homeIcon.src = './images/main_site/menu/home-icon.png';
+            searchIcon.addEventListener('mouseout', changeBackSearchIcon);
+            searchIcon.src = './images/main_site/menu/search-icon.png';
+
             closeMenu();
 
             setTimeout(() => {
@@ -170,6 +169,8 @@
             }, 140);
 
         }
+
+
         //--------------------------------------------------------------
 
         const pagBlue = document.querySelector('.pag-blue');
@@ -177,11 +178,7 @@
         const pagStroke2 = document.querySelector('.pag-stroke2');
         const pagStroke3 = document.querySelector('.pag-stroke3');
 
-        // console.log(pagBlue);
-        // console.log(pagStroke1);
-        // console.log(pagStroke2);
-        // console.log(pagStroke3);
-
+      
         pagBlue.addEventListener('click', changeToBlue);
         pagStroke1.addEventListener('click', changeToBlue1);
         pagStroke2.addEventListener('click', changeToBlue2);
@@ -226,7 +223,7 @@
         }
 
 
-
+        //---------------------------------------------------------------------------
 
         const redSeatCont = document.querySelector('.red-seat-container');
         const blueSeatCont = document.querySelector('.blue-seat-container');
@@ -241,6 +238,11 @@
         darkSeatCont.addEventListener('click', goToProduct);
 
         function goToProduct() {
+            homeIcon.addEventListener('mouseout', changeBackHomeIcon);
+            homeIcon.src = './images/main_site/menu/home-icon.png';
+            searchIcon.addEventListener('mouseout', changeBackSearchIcon);
+            searchIcon.src = './images/main_site/menu/search-icon.png';
+                
             setTimeout(() => {
 
                 productSec.style.display = "block";
@@ -256,11 +258,11 @@
             }, 140);
         }
 
-
+        //------------------------------------------------------------------------
         function backToHome() {
             homeIcon.removeEventListener('mouseout', changeBackHomeIcon);
             searchIcon.addEventListener('mouseout', changeBackSearchIcon);
-            let imgSrc = searchIcon.src = './images/main_site/menu/search-icon.png';
+            searchIcon.src = './images/main_site/menu/search-icon.png';
             setTimeout(() => {
                 productSec.style.opacity = "0";
                 setTimeout(() => (productSec.style.display = 'none'), 50);
