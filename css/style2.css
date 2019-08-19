@@ -592,51 +592,88 @@ body {
     height: auto;
 }
 
-.product .product-wrapper .left-part img:nth-child(3) {
+#add-icon {
     position: absolute;
     bottom: 6%;
     left: 28%;
     width: 5%;
     height: auto;
     cursor: pointer;
+    transition: all .2s ease;
 }
 
-.product .product-wrapper .left-part img:nth-child(4) {
+
+
+#add-icon:active {
+    transform: scale(1.16);
+}
+
+#remove-icon {
     position: absolute;
     bottom: 6%;
     left: 34%;
     width: 5%;
     height: auto;
     cursor: pointer;
+    transition: all .2s ease;
 }
 
-.product .product-wrapper .left-part img:nth-child(5) {
+
+
+#remove-icon:active {
+    transform: scale(1.16);
+}
+
+
+#search-icon {
     position: absolute;
     bottom: 5.8%;
     right: 7%;
-    width: 5%;
+    width: 5.2%;
     height: auto;
     cursor: pointer;
+    transition: all .25s ease;
 }
 
-.product .product-wrapper .left-part img:nth-child(6) {
+
+
+#search-icon:hover {
+    transform: scale(1.14);
+}
+
+#pin-icon {
     position: absolute;
     bottom: 6%;
     right: 15%;
     width: 3.5%;
     height: auto;
     cursor: pointer;
+    transition: all .25s ease;
 }
 
-.product .product-wrapper .left-part img:nth-child(7) {
+
+
+#pin-icon:hover {
+    transform: scale(1.14);
+}
+
+#heart-icon {
     position: absolute;
     top: 7%;
     right: 7%;
     width: 4%;
     height: auto;
     cursor: pointer;
+    transition: all .48s ease-out;
 }
 
+#heart-icon:hover {
+    transform: scale(1.12);
+}
+
+#heart-icon:active {
+    transform: scale(1.7);
+}
 .product .product-wrapper .left-part img:nth-child(8) {
     position: absolute;
     top: 7.8%;
