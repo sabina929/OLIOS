@@ -288,7 +288,7 @@
         }
 
 
-//----------------------------------------------------------------
+       //----------------------------------------------------------------
 
         const addIcon = document.querySelector('#add-icon');
         const removeIcon = document.querySelector('#remove-icon');
@@ -330,6 +330,7 @@
         function changeBackToRemoveIcon() {
             removeIcon.src = "./images/product/left_photo/remove.png";
         }
+
         // SEARCH ICON
         function changeSearchIconToDark() {
             searchIcon2.src = "./images/product/left_photo/search-dark.png";
@@ -338,6 +339,7 @@
         function changeBackToSearchIcon() {
             searchIcon2.src = "./images/product/left_photo/search.png";
         }
+
         // PIN ICON
         function changePinIconToDark() {
             pinIcon.src = "./images/product/left_photo/pin-dark.png";
@@ -346,29 +348,27 @@
         function changeBackToPinIcon() {
             pinIcon.src = "./images/product/left_photo/pin.png";
         }
+
         // HEART ICON
         function changeHeartIconToFilledOnMouseover() {
             heartIcon.src = "./images/product/left_photo/filled-heart.png";
         }
 
 
-        function changeBackTochangeHeartIconOnMouseout() {
+        function changeBackToHeartIconOnMouseout() {
             heartIcon.src = "./images/product/left_photo/heart.png";
-
         }
 
         function changeHeartIconToFilled() {
             heartIcon.src = "./images/product/left_photo/filled-heart.png";
             timesClickedToHeartIcon = 2;
             heartIcon.removeEventListener('mouseout', changeBackToHeartIconOnMouseout);
-
         }
 
         function changeBackToHeartIcon() {
             heartIcon.src = "./images/product/left_photo/heart.png";
             timesClickedToHeartIcon = 1;
             heartIcon.addEventListener('mouseout', changeBackToHeartIconOnMouseout);
-
         }
 
         function checktimesClickedToHeartIcon() {
