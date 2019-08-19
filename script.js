@@ -309,7 +309,7 @@
         let timesClickedToHeartIcon = 1;
         heartIcon.addEventListener('click', checktimesClickedToHeartIcon);
         heartIcon.addEventListener('mouseover', changeHeartIconToFilledOnMouseover);
-        heartIcon.addEventListener('mouseout', changeBackTochangeHeartIconOnMouseout);
+        heartIcon.addEventListener('mouseout', changeBackToHeartIconOnMouseout);
 
         // ADD ICON
         function changeAddIconToReversed() {
@@ -360,21 +360,21 @@
         function changeHeartIconToFilled() {
             heartIcon.src = "./images/product/left_photo/filled-heart.png";
             timesClickedToHeartIcon = 2;
-            heartIcon.removeEventListener('mouseout', changeBackTochangeHeartIconOnMouseout);
+            heartIcon.removeEventListener('mouseout', changeBackToHeartIconOnMouseout);
 
         }
 
-        function changeBackTochangeHeartIcon() {
+        function changeBackToHeartIcon() {
             heartIcon.src = "./images/product/left_photo/heart.png";
             timesClickedToHeartIcon = 1;
-            heartIcon.addEventListener('mouseout', changeBackTochangeHeartIconOnMouseout);
+            heartIcon.addEventListener('mouseout', changeBackToHeartIconOnMouseout);
 
         }
 
         function checktimesClickedToHeartIcon() {
             if (timesClickedToHeartIcon == 2) {
                 // console.log("not filled");
-                changeBackTochangeHeartIcon();
+                changeBackToHeartIcon();
             } else if (timesClickedToHeartIcon == 1) {
                 // console.log("filled");
                 changeHeartIconToFilled();
