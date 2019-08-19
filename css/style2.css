@@ -770,7 +770,7 @@ body {
 }
 
 .product .product-wrapper .right-part .upper .right-part_upper_button:active {
-    transform: translate(0px, 4px);
+    transform: translate(0px, 8px);
 }
 
 .product .product-wrapper .right-part .upper .right-part_upper_button a {
