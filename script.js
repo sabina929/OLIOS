@@ -6,6 +6,7 @@
         const livingRoom = document.querySelector('#living_room');
         const categories = document.querySelector('.categories');
 
+        const searchSection = document.querySelector('.search-section');
 
         // HOME ICON
         homeIcon.addEventListener('mouseover', changeHomeIcon);
@@ -56,6 +57,15 @@
             searchIcon.removeEventListener('mouseout', changeBackSearchIcon);
             homeIcon.addEventListener('mouseout', changeBackHomeIcon);
             homeIcon.src = './images/main_site/menu/home-icon.png';
+
+            setTimeout(() => {
+                productSec.style.opacity = "0";
+                setTimeout(() => {productSec.style.display = 'none'}, 50);
+                searchSection.style.display = "block";
+                setTimeout(() => {searchSection.style.opacity = '1'}, 50);
+                categories.style.opacity = '0';
+                setTimeout(() => {categories.style.display = 'none'}, 50);
+            }, 140);
         }
 
         function changeSearchIcon(e) {
@@ -150,7 +160,7 @@
         }
 
 
-        function displayCategories() {
+          function displayCategories() {
             homeIcon.addEventListener('mouseout', changeBackHomeIcon);
             homeIcon.src = './images/main_site/menu/home-icon.png';
             searchIcon.addEventListener('mouseout', changeBackSearchIcon);
@@ -161,15 +171,17 @@
             setTimeout(() => {
 
                 productSec.style.opacity = "0";
-                setTimeout(() => (productSec.style.display = 'none'), 50);
+                setTimeout(() => {productSec.style.display = 'none'}, 50);
+
+                searchSection.style.opacity = "0";
+                setTimeout(() => {searchSection.style.display = 'none'}, 50);
 
                 categories.style.display = 'flex';
-                setTimeout(() => (categories.style.opacity = '1'), 50);
+                setTimeout(() => {categories.style.opacity = '1'}, 50);
 
             }, 140);
 
         }
-
 
         //--------------------------------------------------------------
 
@@ -259,15 +271,18 @@
         }
 
         //------------------------------------------------------------------------
+    
         function backToHome() {
             homeIcon.removeEventListener('mouseout', changeBackHomeIcon);
             searchIcon.addEventListener('mouseout', changeBackSearchIcon);
             searchIcon.src = './images/main_site/menu/search-icon.png';
             setTimeout(() => {
                 productSec.style.opacity = "0";
-                setTimeout(() => (productSec.style.display = 'none'), 50);
+                setTimeout(() => {productSec.style.display = 'none'}, 50);
+                searchSection.style.opacity = "0";
+                setTimeout(() => {searchSection.style.display = 'none'}, 50);
                 categories.style.opacity = '0';
-                setTimeout(() => (categories.style.display = 'none'), 50);
+                setTimeout(() => {categories.style.display = 'none'}, 50);
             }, 140);
         }
 
