@@ -335,6 +335,7 @@
         addIcon.addEventListener('mouseout', changeBackToAddIcon);
         removeIcon.addEventListener('mouseover', changeRemoveIconToReversed);
         removeIcon.addEventListener('mouseout', changeBackToRemoveIcon);
+        searchIcon2.addEventListener('click', goToSearchSection);
         searchIcon2.addEventListener('mouseover', changeSearchIconToDark);
         searchIcon2.addEventListener('mouseout', changeBackToSearchIcon);
         pinIcon.addEventListener('mouseover', changePinIconToDark);
@@ -367,6 +368,23 @@
         }
 
         // SEARCH ICON
+        function goToSearchSection() {
+            searchIcon.src = './images/main_site/menu/search-icon-blue.png';
+            searchIcon.removeEventListener('mouseout', changeBackSearchIcon);
+            
+            setTimeout(() => {
+                productSec.style.opacity = "0";
+                setTimeout(() => {
+                    productSec.style.display = 'none'
+                }, 50);
+                searchSection.style.display = "block";
+                setTimeout(() => {
+                    searchSection.style.opacity = '1'
+                }, 50);
+
+            }, 140);
+        }
+
         function changeSearchIconToDark() {
             searchIcon2.src = "./images/product/left_photo/search-dark.png";
         }
