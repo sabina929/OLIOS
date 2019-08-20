@@ -433,3 +433,16 @@
                 changeHeartIconToFilled();
             }
         }
+
+
+        //---------------------------------------------------
+        const clearIcon = document.querySelector('#clear-icon');
+        const searchInput = document.querySelector('#search-input');
+
+        clearIcon.addEventListener('click', clearInputValue);
+
+        function clearInputValue() {
+            // console.log(searchInput.value);
+            searchInput.value = "";
+            searchInput.focus();
+        }
