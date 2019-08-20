@@ -169,7 +169,9 @@
             closeMenu();
 
             setTimeout(() => {
-
+                    
+                setTimeout(() => {searchInput.value = "RED SEAT"}, 150);
+                    
                 productSec.style.opacity = "0";
                 setTimeout(() => {productSec.style.display = 'none'}, 50);
 
@@ -276,7 +278,9 @@
             homeIcon.removeEventListener('mouseout', changeBackHomeIcon);
             searchIcon.addEventListener('mouseout', changeBackSearchIcon);
             searchIcon.src = './images/main_site/menu/search-icon.png';
+                
             setTimeout(() => {
+                setTimeout(() => {searchInput.value = "RED SEAT"}, 150);
                 productSec.style.opacity = "0";
                 setTimeout(() => {productSec.style.display = 'none'}, 50);
                 searchSection.style.opacity = "0";
