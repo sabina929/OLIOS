@@ -323,8 +323,21 @@
         }
 
 
-       //----------------------------------------------------------------
 
+        //--------------------------------------------------------------
+        const clearIcon = document.querySelector('#clear-icon');
+        const searchInput = document.querySelector('#search-input');
+
+        clearIcon.addEventListener('click', clearInputValue);
+
+        function clearInputValue() {
+            // console.log(searchInput.value);
+            searchInput.value = "";
+            searchInput.focus();
+        }
+
+
+       //----------------------------------------------------------------
         const addIcon = document.querySelector('#add-icon');
         const removeIcon = document.querySelector('#remove-icon');
         const searchIcon2 = document.querySelector('#search-icon');
@@ -371,7 +384,8 @@
         function goToSearchSection() {
             searchIcon.src = './images/main_site/menu/search-icon-blue.png';
             searchIcon.removeEventListener('mouseout', changeBackSearchIcon);
-            
+            searchInput.value = "RED SEAT";
+                
             setTimeout(() => {
                 productSec.style.opacity = "0";
                 setTimeout(() => {
@@ -432,17 +446,4 @@
                 // console.log("filled");
                 changeHeartIconToFilled();
             }
-        }
-
-
-        //---------------------------------------------------
-        const clearIcon = document.querySelector('#clear-icon');
-        const searchInput = document.querySelector('#search-input');
-
-        clearIcon.addEventListener('click', clearInputValue);
-
-        function clearInputValue() {
-            // console.log(searchInput.value);
-            searchInput.value = "";
-            searchInput.focus();
         }
