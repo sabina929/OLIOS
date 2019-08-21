@@ -296,7 +296,7 @@
                     whiteSeat.style.width = "60%";
                     whiteSeat.style.left = "28%";
                     whiteSeat.style.top = "18%";
-                }, 150);
+                }, 740);
                 productSec.style.opacity = "0";
                 setTimeout(() => {
                     productSec.style.display = 'none';
