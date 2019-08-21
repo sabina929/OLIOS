@@ -516,7 +516,7 @@
             } else if (regex3.test(searchInput.value)) {
                 prodRedSeat.style.display = 'block';
                 prodDarkSeat.style.display = 'block';
-                resultText.innerText = '2 searched result';
+                resultText.innerText = '2 searched results';
             } else if (!regex1.test(searchInput.value) && !regex2.test(searchInput.value) && !regex3.test(searchInput.value)) {
                 // console.log('false');
                 prodRedSeat.style.display = 'none';
