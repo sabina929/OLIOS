@@ -1,7 +1,6 @@
         const homeIcon = document.querySelector('.home-icon');
         const basketIcon = document.querySelector('.basket-icon');
         const searchIcon = document.querySelector('.search-icon');
-        // console.log(homeIcon.src);
 
         const livingRoom = document.querySelector('#living_room');
         const categories = document.querySelector('.categories');
@@ -17,14 +16,12 @@
         function changeHomeIcon(e) {
             e.preventDefault();
             let imgSrc = homeIcon.src = './images/main_site/menu/home-icon-blue.png';
-            // let imgTransition = homeIcon.style.transition = 'all 0.5s ease';
             // console.log(homeIcon.src);
         }
 
         function changeBackHomeIcon(e) {
             e.preventDefault();
             let imgSrc = homeIcon.src = './images/main_site/menu/home-icon.png';
-            // console.log(homeIcon.src);
         }
 
 
@@ -42,7 +39,6 @@
         function changeBackBasketIcon(e) {
             e.preventDefault();
             let imgSrc = basketIcon.src = './images/main_site/menu/basket-icon.png';
-            // console.log(basketIcon.src);
         }
 
 
@@ -60,12 +56,18 @@
 
             setTimeout(() => {
                 productSec.style.opacity = "0";
-                setTimeout(() => {productSec.style.display = 'none'}, 50);
+                setTimeout(() => {
+                    productSec.style.display = 'none'
+                }, 50);
                 searchSection.style.display = "block";
-                setTimeout(() => {searchSection.style.opacity = '1'}, 50);
+                setTimeout(() => {
+                    searchSection.style.opacity = '1'
+                }, 50);
                 categories.style.opacity = '0';
-                setTimeout(() => {categories.style.display = 'none'}, 50);
-            }, 140);
+                setTimeout(() => {
+                    categories.style.display = 'none'
+                }, 50);
+            }, 20);
         }
 
         function changeSearchIcon(e) {
@@ -77,12 +79,14 @@
         function changeBackSearchIcon(e) {
             e.preventDefault();
             let imgSrc = searchIcon.src = './images/main_site/menu/search-icon.png';
+
         }
 
-
         //--------------------------------------------------------------
+
         const downloadIcon = document.querySelector('.down-icon');
-        
+        // console.log(downloadIcon);
+
         downloadIcon.addEventListener('mouseover', moveDown);
         downloadIcon.addEventListener('mouseout', moveUp);
 
@@ -97,7 +101,6 @@
             let imgDown = downloadIcon.style.transform = "translateY(0px)";
             let imgSrc = downloadIcon.src = " ./images/main_site/menu/in-icon.png";
         }
-
 
         //--------------------------------------------------------------
 
@@ -160,7 +163,7 @@
         }
 
 
-          function displayCategories() {
+        function displayCategories() {
             homeIcon.addEventListener('mouseout', changeBackHomeIcon);
             homeIcon.src = './images/main_site/menu/home-icon.png';
             searchIcon.addEventListener('mouseout', changeBackSearchIcon);
@@ -169,21 +172,32 @@
             closeMenu();
 
             setTimeout(() => {
-                    
-                setTimeout(() => {searchInput.value = "RED SEAT"}, 150);
-                    
+                setTimeout(() => {
+                    searchInput.value = "RED SEAT";
+                    whiteSeat.src = "./images/product/left_photo/white-seat.png"
+                    whiteSeat.style.width = "60%";
+                    whiteSeat.style.left = "28%";
+                    whiteSeat.style.top = "18%";
+                }, 150);
                 productSec.style.opacity = "0";
-                setTimeout(() => {productSec.style.display = 'none'}, 50);
+                setTimeout(() => {
+                    productSec.style.display = 'none';
+                }, 50);
 
                 searchSection.style.opacity = "0";
-                setTimeout(() => {searchSection.style.display = 'none'}, 50);
+                setTimeout(() => {
+                    searchSection.style.display = 'none';
+                }, 50);
 
                 categories.style.display = 'flex';
-                setTimeout(() => {categories.style.opacity = '1'}, 50);
+                setTimeout(() => {
+                    categories.style.opacity = '1';
+                }, 50);
 
-            }, 140);
+            }, 20);
 
         }
+
 
         //--------------------------------------------------------------
 
@@ -192,7 +206,7 @@
         const pagStroke2 = document.querySelector('.pag-stroke2');
         const pagStroke3 = document.querySelector('.pag-stroke3');
 
-      
+
         pagBlue.addEventListener('click', changeToBlue);
         pagStroke1.addEventListener('click', changeToBlue1);
         pagStroke2.addEventListener('click', changeToBlue2);
@@ -237,15 +251,11 @@
         }
 
 
-        //---------------------------------------------------------------------------
-
         const redSeatCont = document.querySelector('.red-seat-container');
         const blueSeatCont = document.querySelector('.blue-seat-container');
         const darkSeatCont = document.querySelector('.dark-seat-container');
 
         const productSec = document.querySelector('.product');
-
-        // console.log(redSeatCont);
 
         redSeatCont.addEventListener('click', goToProduct);
         blueSeatCont.addEventListener('click', goToProduct);
@@ -258,45 +268,57 @@
             searchIcon.src = './images/main_site/menu/search-icon.png';
                 
             setTimeout(() => {
-
                 productSec.style.display = "block";
                 setTimeout(() => {
                     productSec.style.opacity = "1"
                 }, 50);
-
+                searchSection.style.opacity = "0";
+                setTimeout(() => {
+                    searchSection.style.display = 'none';
+                }, 50);
                 categories.style.opacity = "0";
                 setTimeout(() => {
                     categories.style.display = "none";
                 }, 50);
-
-            }, 140);
+            }, 20);
         }
 
-        //------------------------------------------------------------------------
-    
+
         function backToHome() {
             homeIcon.removeEventListener('mouseout', changeBackHomeIcon);
             searchIcon.addEventListener('mouseout', changeBackSearchIcon);
             searchIcon.src = './images/main_site/menu/search-icon.png';
-                
+
             setTimeout(() => {
-                setTimeout(() => {searchInput.value = "RED SEAT"}, 150);
+                setTimeout(() => {
+                    searchInput.value = "RED SEAT";
+                    whiteSeat.src = "./images/product/left_photo/white-seat.png"
+                    whiteSeat.style.width = "60%";
+                    whiteSeat.style.left = "28%";
+                    whiteSeat.style.top = "18%";
+                }, 150);
                 productSec.style.opacity = "0";
-                setTimeout(() => {productSec.style.display = 'none'}, 50);
+                setTimeout(() => {
+                    productSec.style.display = 'none';
+                }, 640);
                 searchSection.style.opacity = "0";
-                setTimeout(() => {searchSection.style.display = 'none'}, 50);
+                setTimeout(() => {
+                    searchSection.style.display = 'none';
+                }, 640);
                 categories.style.opacity = '0';
-                setTimeout(() => {categories.style.display = 'none'}, 50);
+                setTimeout(() => {
+                    categories.style.display = 'none';
+                }, 640);
             }, 140);
         }
 
 
-       //-------------------------------------------------------------------
+        //----------------------------------------------------------------
 
         const incrIcon = document.querySelector('#increment');
         const decrIcon = document.querySelector('#decrement');
         const quant = document.querySelector('#quantity');
-               
+     
         incrIcon.addEventListener('click', increaseAmount);
         decrIcon.addEventListener('click', decreaseAmount);
 
@@ -315,7 +337,9 @@
         function decreaseAmount(event) {
             event.preventDefault();
             // event.stopPropagation();
+               
             let amount = Number(quant.innerText);
+                
             if (amount > 1) {
                 amount--;
             } else if (amount === 1) {
@@ -327,8 +351,8 @@
         }
 
 
+        //---------------------------------------------------
 
-        //--------------------------------------------------------------
         const clearIcon = document.querySelector('#clear-icon');
         const searchInput = document.querySelector('#search-input');
 
@@ -338,15 +362,21 @@
             // console.log(searchInput.value);
             searchInput.value = "";
             searchInput.focus();
+            prodRedSeat.style.display = 'none';
+            prodDarkSeat.style.display = 'none';
+            resultText.innerText = 'No results found';
         }
 
 
-       //----------------------------------------------------------------
+
+        //----------------------------------------------------------------
+
         const addIcon = document.querySelector('#add-icon');
         const removeIcon = document.querySelector('#remove-icon');
         const searchIcon2 = document.querySelector('#search-icon');
         const pinIcon = document.querySelector('#pin-icon');
         const heartIcon = document.querySelector('#heart-icon');
+
 
         addIcon.addEventListener('mouseover', changeAddIconToReversed);
         addIcon.addEventListener('mouseout', changeBackToAddIcon);
@@ -358,8 +388,8 @@
         pinIcon.addEventListener('mouseover', changePinIconToDark);
         pinIcon.addEventListener('mouseout', changeBackToPinIcon);
 
-
         let timesClickedToHeartIcon = 1;
+
         heartIcon.addEventListener('click', checktimesClickedToHeartIcon);
         heartIcon.addEventListener('mouseover', changeHeartIconToFilledOnMouseover);
         heartIcon.addEventListener('mouseout', changeBackToHeartIconOnMouseout);
@@ -389,7 +419,7 @@
             searchIcon.src = './images/main_site/menu/search-icon-blue.png';
             searchIcon.removeEventListener('mouseout', changeBackSearchIcon);
             searchInput.value = "RED SEAT";
-                
+
             setTimeout(() => {
                 productSec.style.opacity = "0";
                 setTimeout(() => {
@@ -399,8 +429,7 @@
                 setTimeout(() => {
                     searchSection.style.opacity = '1'
                 }, 50);
-
-            }, 140);
+            }, 20);
         }
 
         function changeSearchIconToDark() {
@@ -424,7 +453,6 @@
         function changeHeartIconToFilledOnMouseover() {
             heartIcon.src = "./images/product/left_photo/filled-heart.png";
         }
-
 
         function changeBackToHeartIconOnMouseout() {
             heartIcon.src = "./images/product/left_photo/heart.png";
@@ -450,4 +478,151 @@
                 // console.log("filled");
                 changeHeartIconToFilled();
             }
+        }
+
+
+        // -----------------------------------------------------------------------
+
+        const prodRedSeat = document.querySelector('#redseat');
+        const prodDarkSeat = document.querySelector('#darkseat');
+        const resultText = document.querySelector('.result-text p');
+        const whiteSeat = document.querySelector('.white-seat');
+        const recommendedDark = document.querySelector('.recommended-dark');
+        const recommendedBlue = document.querySelector('.recommended-blue');
+        const recommendedRed = document.querySelector('.recommended-red');
+        
+        searchInput.addEventListener('change', displayMatches);
+        searchInput.addEventListener('keyup', displayMatches);
+
+        // const prods = ['red seat', 'dark seat'];
+
+        // const regex = /^r(([a-z]\s?)*)?/gi;
+        const regex1 = /^r((e)?(d)?(\s)?(s)?(e)?(a)?(t)?)*/gi;
+        const regex2 = /^d((a)?(r)?(k)?(\s)?(s)?(e)?(a)?(t)?)*/gi;
+
+
+        function displayMatches(e) {
+            e.preventDefault();
+            // console.log(searchInput.value);
+
+            if (regex1.test(searchInput.value)) {
+                prodDarkSeat.style.display = 'none';
+                prodRedSeat.style.display = 'block';
+                resultText.innerText = '1 searched result';
+            } else if (regex2.test(searchInput.value)) {
+                prodRedSeat.style.display = 'none';
+                prodDarkSeat.style.display = 'block';
+                resultText.innerText = '1 searched result';
+            } else if (!regex1.test(searchInput.value) && !regex2.test(searchInput.value)) {
+                // console.log('false');
+                prodRedSeat.style.display = 'none';
+                prodDarkSeat.style.display = 'none';
+                resultText.innerText = 'No results found';
+            }
+        }
+
+    
+        
+        prodRedSeat.addEventListener('click', goToRedSeatProduct);
+        prodDarkSeat.addEventListener('click', goToDarkSeatProduct);
+
+        function goToRedSeatProduct() {
+            homeIcon.addEventListener('mouseout', changeBackHomeIcon);
+            homeIcon.src = './images/main_site/menu/home-icon.png';
+            searchIcon.addEventListener('mouseout', changeBackSearchIcon);
+            searchIcon.src = './images/main_site/menu/search-icon.png';
+            setTimeout(() => {
+                whiteSeat.src = "./images/categories/red-seat/red-seat.png"
+                whiteSeat.style.width = "54%";
+                whiteSeat.style.left = "30%";
+                whiteSeat.style.top = "19%";
+                productSec.style.display = "block";
+                setTimeout(() => {
+                    productSec.style.opacity = "1"
+                }, 50);
+                searchSection.style.opacity = "0";
+                setTimeout(() => {
+                    searchSection.style.display = 'none';
+                }, 50);
+                categories.style.opacity = "0";
+                setTimeout(() => {
+                    categories.style.display = "none";
+                }, 50);
+
+            }, 20);
+        }
+
+        function goToDarkSeatProduct() {
+            homeIcon.addEventListener('mouseout', changeBackHomeIcon);
+            homeIcon.src = './images/main_site/menu/home-icon.png';
+            searchIcon.addEventListener('mouseout', changeBackSearchIcon);
+            searchIcon.src = './images/main_site/menu/search-icon.png';
+            setTimeout(() => {
+                whiteSeat.src = "./images/categories/dark-seat/dark-seat.png"
+                whiteSeat.style.width = "55%";
+                whiteSeat.style.left = "30%";
+                whiteSeat.style.top = "23%";
+
+                productSec.style.display = "block";
+                setTimeout(() => {
+                    productSec.style.opacity = "1"
+                }, 50);
+                searchSection.style.opacity = "0";
+                setTimeout(() => {
+                    searchSection.style.display = 'none';
+                }, 50);
+                categories.style.opacity = "0";
+                setTimeout(() => {
+                    categories.style.display = "none";
+                }, 50);
+            }, 20);
+        }
+
+        recommendedDark.addEventListener('click', changeToDarkSeat);
+        recommendedBlue.addEventListener('click', changeToBlueSeat);
+        recommendedRed.addEventListener('click', changeToRedSeat);
+
+        function changeToDarkSeat() {
+            setTimeout(() => {
+                whiteSeat.style.opacity = "0";
+                setTimeout(() => {
+                    whiteSeat.src = "./images/categories/dark-seat/dark-seat.png"
+                    whiteSeat.style.width = "55%";
+                    whiteSeat.style.left = "30%";
+                    whiteSeat.style.top = "23%";
+                }, 360);
+                setTimeout(() => {
+                    whiteSeat.style.opacity = "1";
+                }, 680);
+            }, 10);
+        }
+
+        function changeToBlueSeat() {
+            setTimeout(() => {
+                whiteSeat.style.opacity = "0";
+                setTimeout(() => {
+                    whiteSeat.src = "./images/categories/blue-seat/blue-seat.png"
+                    whiteSeat.style.width = "50%";
+                    whiteSeat.style.left = "32.5%";
+                    whiteSeat.style.top = "22.5%";
+                }, 360);
+                setTimeout(() => {
+                    whiteSeat.style.opacity = "1";
+                }, 680);
+            }, 10);
+        }
+
+        function changeToRedSeat() {
+            setTimeout(() => {
+                whiteSeat.style.opacity = "0";
+                setTimeout(() => {
+                    whiteSeat.src = "./images/categories/red-seat/red-seat.png"
+                    whiteSeat.style.width = "54%";
+                    whiteSeat.style.left = "30%";
+                    whiteSeat.style.top = "19%";
+                }, 360);
+                setTimeout(() => {
+                    whiteSeat.style.opacity = "1";
+                }, 680);
+            }, 10);
         }
