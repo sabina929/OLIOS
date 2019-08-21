@@ -499,7 +499,7 @@
         // const regex = /^r(([a-z]\s?)*)?/gi;
         const regex1 = /^r((e)?(d)?(\s)?(s)?(e)?(a)?(t)?)*/gi;
         const regex2 = /^d((a)?(r)?(k)?(\s)?(s)?(e)?(a)?(t)?)*/gi;
-
+        const regex3 = /^s((e)?(a)?(t)?)*/gi;
 
         function displayMatches(e) {
             e.preventDefault();
@@ -513,7 +513,11 @@
                 prodRedSeat.style.display = 'none';
                 prodDarkSeat.style.display = 'block';
                 resultText.innerText = '1 searched result';
-            } else if (!regex1.test(searchInput.value) && !regex2.test(searchInput.value)) {
+            } else if (regex3.test(searchInput.value)) {
+                prodRedSeat.style.display = 'block';
+                prodDarkSeat.style.display = 'block';
+                resultText.innerText = '2 searched result';
+            } else if (!regex1.test(searchInput.value) && !regex2.test(searchInput.value) && !regex3.test(searchInput.value)) {
                 // console.log('false');
                 prodRedSeat.style.display = 'none';
                 prodDarkSeat.style.display = 'none';
