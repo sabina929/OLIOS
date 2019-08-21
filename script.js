@@ -55,6 +55,13 @@
             homeIcon.src = './images/main_site/menu/home-icon.png';
 
             setTimeout(() => {
+                setTimeout(() => {
+                    whiteSeat.src = "./images/product/left_photo/white-seat.png";
+                    whiteSeat.style.width = "60%";
+                    whiteSeat.style.left = "28%";
+                    whiteSeat.style.top = "18%";
+                }, 150);    
+                    
                 productSec.style.opacity = "0";
                 setTimeout(() => {
                     productSec.style.display = 'none'
@@ -178,6 +185,9 @@
                     whiteSeat.style.width = "60%";
                     whiteSeat.style.left = "28%";
                     whiteSeat.style.top = "18%";
+                    prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'block';
+                    resultText.innerText = '1 searched result';
                 }, 150);
                 productSec.style.opacity = "0";
                 setTimeout(() => {
@@ -296,6 +306,9 @@
                     whiteSeat.style.width = "60%";
                     whiteSeat.style.left = "28%";
                     whiteSeat.style.top = "18%";
+                    prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'block';
+                    resultText.innerText = '1 searched result';
                 }, 740);
                 productSec.style.opacity = "0";
                 setTimeout(() => {
@@ -418,8 +431,14 @@
         function goToSearchSection() {
             searchIcon.src = './images/main_site/menu/search-icon-blue.png';
             searchIcon.removeEventListener('mouseout', changeBackSearchIcon);
-            searchInput.value = "RED SEAT";
-
+                
+            setTimeout(() => {
+                whiteSeat.src = "./images/product/left_photo/white-seat.png";
+                whiteSeat.style.width = "60%";
+                whiteSeat.style.left = "28%";
+                whiteSeat.style.top = "18%";
+            }, 150);
+         
             setTimeout(() => {
                 productSec.style.opacity = "0";
                 setTimeout(() => {
@@ -537,9 +556,17 @@
             searchIcon.src = './images/main_site/menu/search-icon.png';
             setTimeout(() => {
                 whiteSeat.src = "./images/categories/red-seat/red-seat.png"
-                whiteSeat.style.width = "54%";
-                whiteSeat.style.left = "30%";
-                whiteSeat.style.top = "19%";
+                whiteSeat.style.width = "52%";
+                whiteSeat.style.left = "31%";
+                whiteSeat.style.top = "20.5%";
+                    
+                setTimeout(() => {
+                    searchInput.value = "RED SEAT";
+                    prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'block';
+                    resultText.innerText = '1 searched result';
+                }, 150);
+                    
                 productSec.style.display = "block";
                 setTimeout(() => {
                     productSec.style.opacity = "1"
@@ -564,9 +591,16 @@
             setTimeout(() => {
                 whiteSeat.src = "./images/categories/dark-seat/dark-seat.png"
                 whiteSeat.style.width = "55%";
-                whiteSeat.style.left = "30%";
+                whiteSeat.style.left = "29%";
                 whiteSeat.style.top = "23%";
 
+                setTimeout(() => {
+                    searchInput.value = "RED SEAT";
+                    prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'block';
+                    resultText.innerText = '1 searched result';
+                }, 150);
+                    
                 productSec.style.display = "block";
                 setTimeout(() => {
                     productSec.style.opacity = "1"
@@ -592,7 +626,7 @@
                 setTimeout(() => {
                     whiteSeat.src = "./images/categories/dark-seat/dark-seat.png"
                     whiteSeat.style.width = "55%";
-                    whiteSeat.style.left = "30%";
+                    whiteSeat.style.left = "29%";
                     whiteSeat.style.top = "23%";
                 }, 360);
                 setTimeout(() => {
@@ -621,9 +655,9 @@
                 whiteSeat.style.opacity = "0";
                 setTimeout(() => {
                     whiteSeat.src = "./images/categories/red-seat/red-seat.png"
-                    whiteSeat.style.width = "54%";
-                    whiteSeat.style.left = "30%";
-                    whiteSeat.style.top = "19%";
+                    whiteSeat.style.width = "52%";
+                    whiteSeat.style.left = "31%";
+                    whiteSeat.style.top = "20.5%";
                 }, 360);
                 setTimeout(() => {
                     whiteSeat.style.opacity = "1";
