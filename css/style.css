@@ -1009,7 +1009,6 @@ body {
     height: 113.3px;
     cursor: pointer;
     display: none;
-    opacity: 0;
 }
 
 .search-section .search-section__wrapper .result-text {
