@@ -306,7 +306,6 @@
                     whiteSeat.style.left = "28%";
                     whiteSeat.style.top = "18%";
                     prodRedSeat.style.display = 'block';
-                    prodDarkSeat.style.display = 'block';
                     resultText.innerText = '1 searched result';
                 }, 740);
                 productSec.style.opacity = "0";
@@ -562,7 +561,6 @@
                 setTimeout(() => {
                     searchInput.value = "RED SEAT";
                     prodRedSeat.style.display = 'block';
-                    prodDarkSeat.style.display = 'block';
                     resultText.innerText = '1 searched result';
                 }, 150);
                     
@@ -596,7 +594,6 @@
                 setTimeout(() => {
                     searchInput.value = "RED SEAT";
                     prodRedSeat.style.display = 'block';
-                    prodDarkSeat.style.display = 'block';
                     resultText.innerText = '1 searched result';
                 }, 150);
                     
