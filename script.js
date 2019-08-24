@@ -186,7 +186,6 @@
                     whiteSeat.style.left = "28%";
                     whiteSeat.style.top = "18%";
                     prodRedSeat.style.display = 'block';
-                    prodDarkSeat.style.display = 'block';
                     resultText.innerText = '1 searched result';
                 }, 150);
                 productSec.style.opacity = "0";
