@@ -13,14 +13,12 @@
 
         homeIcon.addEventListener('click', backToHome);
 
-        function changeHomeIcon(e) {
-            e.preventDefault();
+        function changeHomeIcon() {
             let imgSrc = homeIcon.src = './images/main_site/menu/home-icon-blue.png';
             // console.log(homeIcon.src);
         }
 
-        function changeBackHomeIcon(e) {
-            e.preventDefault();
+        function changeBackHomeIcon() {
             let imgSrc = homeIcon.src = './images/main_site/menu/home-icon.png';
         }
 
@@ -30,14 +28,12 @@
         basketIcon.addEventListener('mouseover', changeBasketIcon);
         basketIcon.addEventListener('mouseout', changeBackBasketIcon);
 
-        function changeBasketIcon(e) {
-            e.preventDefault();
+        function changeBasketIcon() {
             let imgSrc = basketIcon.src = './images/main_site/menu/basket-icon-blue.png';
             // console.log(basketIcon.src);
         }
 
-        function changeBackBasketIcon(e) {
-            e.preventDefault();
+        function changeBackBasketIcon() {
             let imgSrc = basketIcon.src = './images/main_site/menu/basket-icon.png';
         }
 
@@ -47,8 +43,7 @@
         searchIcon.addEventListener('mouseover', changeSearchIcon);
         searchIcon.addEventListener('mouseout', changeBackSearchIcon);
 
-        function changeSearchIconOnClick(e) {
-            e.preventDefault();
+        function changeSearchIconOnClick() {
             let imgSrc = searchIcon.src = './images/main_site/menu/search-icon-blue.png';
             searchIcon.removeEventListener('mouseout', changeBackSearchIcon);
             homeIcon.addEventListener('mouseout', changeBackHomeIcon);
@@ -77,14 +72,12 @@
             }, 20);
         }
 
-        function changeSearchIcon(e) {
-            e.preventDefault();
+        function changeSearchIcon() {
             let imgSrc = searchIcon.src = './images/main_site/menu/search-icon-blue.png';
 
         }
 
-        function changeBackSearchIcon(e) {
-            e.preventDefault();
+        function changeBackSearchIcon() {
             let imgSrc = searchIcon.src = './images/main_site/menu/search-icon.png';
 
         }
@@ -97,14 +90,12 @@
         downloadIcon.addEventListener('mouseover', moveDown);
         downloadIcon.addEventListener('mouseout', moveUp);
 
-        function moveDown(e) {
-            e.preventDefault();
+        function moveDown() {
             let imgDown = downloadIcon.style.transform = "translateY(8px)";
             let imgSrc = downloadIcon.src = " ./images/main_site/menu/in-icon-blue.png";
         }
 
-        function moveUp(e) {
-            e.preventDefault();
+        function moveUp() {
             let imgDown = downloadIcon.style.transform = "translateY(0px)";
             let imgSrc = downloadIcon.src = " ./images/main_site/menu/in-icon.png";
         }
@@ -145,8 +136,7 @@
             // console.log(timesClicked);
         }
 
-        function checktimesClicked(e) {
-            e.preventDefault();
+        function checktimesClicked() {
             if (timesClicked == 2) {
                 // console.log("close");
                 closeMenu();
@@ -159,13 +149,11 @@
         // checktimesClicked();  
 
 
-        function zoomIn(e) {
-            e.preventDefault();
+        function zoomIn() {
             let imgScale = linesIcon.style.transform = 'scale(1.09)';
         }
 
-        function zoomOut(e) {
-            e.preventDefault();
+        function zoomOut() {
             let imgScale = linesIcon.style.transform = 'scale(1)';
         }
 
