@@ -50,7 +50,10 @@
             homeIcon.src = './images/main_site/menu/home-icon.png';
 
             setTimeout(() => {
+                searchInput.value = "RED SEAT";
+                prodRedSeat.style.display = 'block';
                 prodDarkSeat.style.display = 'none';
+                resultText.innerText = '1 searched result';
                 setTimeout(() => {
                     whiteSeat.src = "./images/product/left_photo/white-seat.png";
                     whiteSeat.style.width = "60%";
