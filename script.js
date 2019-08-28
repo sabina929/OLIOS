@@ -50,6 +50,7 @@
             homeIcon.src = './images/main_site/menu/home-icon.png';
 
             setTimeout(() => {
+                prodDarkSeat.style.display = 'none';
                 setTimeout(() => {
                     whiteSeat.src = "./images/product/left_photo/white-seat.png";
                     whiteSeat.style.width = "60%";
@@ -174,6 +175,7 @@
                     whiteSeat.style.left = "28%";
                     whiteSeat.style.top = "18%";
                     prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'none';
                     resultText.innerText = '1 searched result';
                 }, 150);
                 productSec.style.opacity = "0";
@@ -294,6 +296,7 @@
                     whiteSeat.style.left = "28%";
                     whiteSeat.style.top = "18%";
                     prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'none';
                     resultText.innerText = '1 searched result';
                 }, 740);
                 productSec.style.opacity = "0";
@@ -549,6 +552,7 @@
                 setTimeout(() => {
                     searchInput.value = "RED SEAT";
                     prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'none';
                     resultText.innerText = '1 searched result';
                 }, 150);
                     
@@ -582,6 +586,7 @@
                 setTimeout(() => {
                     searchInput.value = "RED SEAT";
                     prodRedSeat.style.display = 'block';
+                    prodDarkSeat.style.display = 'none';
                     resultText.innerText = '1 searched result';
                 }, 150);
                     
